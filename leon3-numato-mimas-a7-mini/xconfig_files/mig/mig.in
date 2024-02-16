@@ -1,0 +1,2 @@
+    bool 'Enable MIG                 ' CONFIG_MIG_ENABLE
+

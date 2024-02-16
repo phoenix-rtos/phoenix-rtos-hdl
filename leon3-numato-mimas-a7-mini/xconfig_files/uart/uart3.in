@@ -1,0 +1,10 @@
+    bool 'Enable UART 3                 ' CONFIG_UART3_ENABLE
+    if [ "$CONFIG_UART3_ENABLE" = "y" ]; then
+        choice 'UART3 FIFO depth' \
+	  "1		CONFIG_UA3_FIFO1 \
+	   2		CONFIG_UA3_FIFO2 \
+	   4		CONFIG_UA3_FIFO4 \
+	   8		CONFIG_UA3_FIFO8 \
+	  16		CONFIG_UA3_FIFO16 \
+	  32  		CONFIG_UA3_FIFO32" 1
+    fi

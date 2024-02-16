@@ -1,0 +1,11 @@
+UART3 enable
+CONFIG_UART3_ENABLE
+  Say Y here to enable UART3.
+
+UART3 FIFO
+CONFIG_UA3_FIFO1
+  The UART has configurable transmitt and receive FIFO's, which can
+  be set to 1 - 32 bytes. Use 1 for minimum area, or 8 - 32 for
+  maximum throughput.
+
+

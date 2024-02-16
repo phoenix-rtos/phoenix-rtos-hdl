@@ -1,0 +1,4 @@
+MIG enable
+CONFIG_MIG_ENABLE
+  Say Y here to enable MIG.
+

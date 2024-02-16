@@ -1,0 +1,14 @@
+    bool 'Enable LEON3 interrupt controller                 ' CONFIG_EN_INT_CTRL
+    if [ "$CONFIG_EN_INT_CTRL" = "y" ]; then
+        choice 'LEON3 interrupt controller' \
+    "IRQMP    CONFIG_IRQ3_ENABLE \
+     IRQAMP    CONFIG_IRQAMP_ENABLE" IRQMP
+    fi
+
+    if [ "$CONFIG_INT_CONTROLLER" = "y" ]; then
+      bool 'Enable secondary interrupts           ' CONFIG_IRQ3_SEC
+      if [ "$CONFIG_IRQ3_SEC" = "y" ]; then
+        int 'Secondary interrupt number (1 - 15)    ' CONFIG_IRQ3_NSEC 12
+      fi
+    fi
+
